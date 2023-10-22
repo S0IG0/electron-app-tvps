@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const {app, BrowserWindow} = require('electron');
 
 function createWindow() {
     // Создаем окно браузера
@@ -6,10 +6,9 @@ function createWindow() {
         width: 800,
         height: 600,
     });
-    Menu.setApplicationMenu(null);
     // Загружаем веб-приложение с локального сервера на localhost
-        win.loadURL('http://localhost:80'); // Замените "ваш_порт" на порт, на котором работает ваш Nginx
-
+    win.loadURL('http://localhost:80'); // Замените "ваш_порт" на порт, на котором работает ваш Nginx
+    win.menuBarVisible = false;
     // Возможно, вам понадобится настроить события для обработки закрытия окна и активации
 
     // Обработка закрытия окна
